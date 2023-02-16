@@ -7,19 +7,13 @@ const overlay = document.getElementById("overlay");
 const body = document.getElementsByTagName("body")[0];
 
 toggler.addEventListener("click", () => {
-  mNav.classList.remove("translate-x-full");
+  mNav.classList.remove("-translate-y-full");
   overlay.classList.remove("hidden");
   body.classList.add("overflow-hidden");
 });
 
 close.addEventListener("click", () => {
-  mNav.classList.add("translate-x-full");
+  mNav.classList.add("-translate-y-full");
   overlay.classList.add("hidden");
-  body.classList.remove("overflow-hidden"); 
-});
-
-overlay.addEventListener("click", () => {
-  mNav.classList.add("translate-x-full");
-  overlay.classList.add("hidden"); 
   body.classList.remove("overflow-hidden"); 
 });
